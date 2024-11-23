@@ -82,7 +82,7 @@ body {
         display: inline-block;
         margin-right: 10px;
         flex: none;
-        width: 80%; /* Уменьшена ширина карточек */
+        width: 40%; /* Уменьшена ширина карточек */
     }
 
     .credits-total {
