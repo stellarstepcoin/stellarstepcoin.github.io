@@ -1,0 +1,179 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    color: #312834;
+}
+
+.header img {
+    width: 100%;
+    max-width: 1920px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Блок Credits */
+.credits {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0ebd6;
+}
+
+.credits-total {
+    font-size: 48px; /* Значительно увеличен размер шрифта */
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 900; /* Black */
+}
+
+.main-title {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 900; /* Black */
+    font-size: 42px; /* Крупнее для заголовка */
+    margin: 10px 0;
+}
+
+/* Карточки */
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f0ebd6;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 40px);
+}
+
+.card img {
+    width: 100%;
+    max-width: 512px;
+    border-radius: 5px;
+}
+
+.card h2 {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 900; /* Black */
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 28px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Для смартфонов */
+@media (max-width: 768px) {
+    .cards {
+        display: block;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+
+    .card {
+        display: inline-block;
+        margin-right: 10px;
+        flex: none;
+    }
+}
+
+/* Блок цитат */
+.quote-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #312834;
+    color: #f0ebd6;
+    flex-wrap: wrap;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.quote-section img {
+    max-height: 280px; /* Ограничиваем максимальную высоту изображения */
+    width: auto;       /* Сохраняем пропорции */
+    border-radius: 10px;
+}
+
+.quote-text {
+    width: 50%;
+    overflow-y: auto; /* Добавляем прокрутку, если текст не помещается */
+}
+
+blockquote {
+    font-family: 'Lobster', cursive;
+    font-size: 48px; /* Увеличен шрифт в 2 раза */
+    margin: 0 0 10px;
+}
+
+cite {
+    font-size: 24px; /* Увеличен шрифт */
+    font-family: 'Lobster', cursive;
+}
+
+/* Инверсия для цитаты */
+.quote-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Блок About */
+.about {
+    background-color: #f0ebd6;
+    text-align: center;
+    padding: 20px;
+}
+
+.about h2 {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 900; /* Black */
+    font-size: 36px; /* Крупнее для заголовка */
+    margin: 10px 0;
+}
+
+.about p {
+    font-size: 28px;
+    font-family: 'Times New Roman', serif;
+}
+
+/* Футер */
+.footer {
+    background-color: #312834;
+    color: #f0ebd6;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer a {
+    color: #f0ebd6;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Новые стили для уменьшения высоты цитат на десктопе */
+@media (min-width: 769px) {
+    .quote-section {
+        max-height: 300px; /* Устанавливаем максимальную высоту для блока */
+        overflow: hidden;
+    }
+
+    .quote-section img {
+        max-height: 280px; /* Ограничиваем максимальную высоту изображений */
+        width: auto;       /* Сохраняем пропорции */
+    }
+
+    .quote-text {
+        overflow-y: auto; /* Добавляем прокрутку текста */
+    }
+}
