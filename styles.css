@@ -20,15 +20,16 @@ body {
 }
 
 .credits-total {
-    font-size: 48px; /* Значительно увеличен размер шрифта */
+    font-size: 36px; /* Размер уменьшен для корректного отображения на мобильных устройствах */
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 900; /* Black */
+    margin: 10px 0;
 }
 
 .main-title {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 900; /* Black */
-    font-size: 42px; /* Крупнее для заголовка */
+    font-size: 32px; /* Уменьшен для лучшего размещения */
     margin: 10px 0;
 }
 
@@ -59,13 +60,14 @@ body {
 .card h2 {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 900; /* Black */
-    font-size: 32px;
+    font-size: 18px; /* Уменьшен для лучшего размещения */
     margin: 10px 0;
 }
 
 .card p {
-    font-size: 28px;
+    font-size: 12px; /* Уменьшен для мобильных */
     font-family: 'Times New Roman', serif;
+    margin: 0 0 10px;
 }
 
 /* Для смартфонов */
@@ -80,6 +82,15 @@ body {
         display: inline-block;
         margin-right: 10px;
         flex: none;
+        width: 80%; /* Уменьшена ширина карточек */
+    }
+
+    .credits-total {
+        font-size: 28px; /* Уменьшен текст */
+    }
+
+    .main-title {
+        font-size: 24px; /* Уменьшен заголовок */
     }
 }
 
@@ -109,18 +120,39 @@ body {
 
 blockquote {
     font-family: 'Lobster', cursive;
-    font-size: 48px; /* Увеличен шрифт в 2 раза */
+    font-size: 36px; /* Уменьшен для мобильных */
     margin: 0 0 10px;
 }
 
 cite {
-    font-size: 24px; /* Увеличен шрифт */
+    font-size: 18px; /* Уменьшен текст подписи */
     font-family: 'Lobster', cursive;
 }
 
-/* Инверсия для цитаты */
-.quote-section.reverse {
-    flex-direction: row-reverse;
+/* Новая компоновка цитат на мобильных */
+@media (max-width: 768px) {
+    .quote-section {
+        flex-direction: column; /* Ставим картинку и текст друг под другом */
+        max-height: none; /* Убираем ограничение высоты */
+    }
+
+    .quote-section img {
+        max-width: 100%;
+        max-height: 200px; /* Уменьшаем картинку */
+        margin-bottom: 10px;
+    }
+
+    .quote-text {
+        width: 100%; /* Текст занимает всю ширину */
+    }
+
+    blockquote {
+        font-size: 24px; /* Уменьшаем текст цитаты */
+    }
+
+    cite {
+        font-size: 16px; /* Уменьшаем подпись */
+    }
 }
 
 /* Блок About */
@@ -133,13 +165,15 @@ cite {
 .about h2 {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 900; /* Black */
-    font-size: 36px; /* Крупнее для заголовка */
+    font-size: 28px; /* Уменьшен заголовок */
     margin: 10px 0;
 }
 
 .about p {
-    font-size: 28px;
+    font-size: 14px; /* Уменьшен текст для мобильных */
     font-family: 'Times New Roman', serif;
+    margin: 0 auto;
+    max-width: 90%; /* Ограничиваем ширину текста */
 }
 
 /* Футер */
@@ -159,21 +193,4 @@ cite {
 
 .footer a:hover {
     text-decoration: underline;
-}
-
-/* Новые стили для уменьшения высоты цитат на десктопе */
-@media (min-width: 769px) {
-    .quote-section {
-        max-height: 300px; /* Устанавливаем максимальную высоту для блока */
-        overflow: hidden;
-    }
-
-    .quote-section img {
-        max-height: 280px; /* Ограничиваем максимальную высоту изображений */
-        width: auto;       /* Сохраняем пропорции */
-    }
-
-    .quote-text {
-        overflow-y: auto; /* Добавляем прокрутку текста */
-    }
 }
