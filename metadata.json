@@ -1,0 +1,17 @@
+{
+  "name": "StellerStep Coin",
+  "symbol": "STLC",
+  "description": "Original StellerStep Coin.",
+  "image": "https://stellarstepcoin.github.io/logo.png",
+  "external_url": "https://stellarstepcoin.github.io/",
+  "attributes": [],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://stellarstepcoin.github.io/logo.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}
